@@ -3,7 +3,7 @@ def call(){
     currentBuild.description = "想描述点啥就描述点啥吧！"
     //
     //agentLabel = "MiniGame"
-    pythonEntry = "helloworld.py"
+    pythonEntry = "hellotest.py"
     pythonParams = ""
     notifyGroup = "All"
     notifyBranch = "Data:${env.__BranchData}, Client:${env.__BranchClient}"
