@@ -60,8 +60,8 @@ def DoAction(configKey : str, platform : BPlatformEnum, game : BGameEnum, args :
         project.End()
 
 def main():
-    consoleTextPath = os.path.join(UOS.DirectoryOfPath(__file__), 'ConsoleText.txt')
-    UJenkinsArgs.Test_FillTestEnvironmentByConsoleTextFile(consoleTextPath)   
+    # consoleTextPath = os.path.join(UOS.DirectoryOfPath(__file__), 'ConsoleText.txt')
+    # UJenkinsArgs.Test_FillTestEnvironmentByConsoleTextFile(consoleTextPath)   
 
     args = UJenkinsArgs.FromEnvironment([
         ('__Game'                   , 'game'                        , str   , 'error'       ),
