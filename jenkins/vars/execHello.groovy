@@ -11,5 +11,5 @@ def call(){
     notifyMsgSuccess = "生成Meta成功"
     notifyMsgFailure = "生成Meta失败"
     notifyMsgAborted = "取消生成Meta了"
-    basePipelineNotifyResult(pythonEntry, pythonParams, notifyGroup, notifyBranch, notifyFeature, notifyMsgSuccess, notifyMsgFailure, notifyMsgAborted)    
+    basePipeline(pythonEntry, pythonParams, notifyGroup, notifyBranch, notifyFeature, notifyMsgSuccess, notifyMsgFailure, notifyMsgAborted)    
 }
