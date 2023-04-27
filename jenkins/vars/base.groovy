@@ -4,7 +4,7 @@ def DoDefineVars()
         env._PYTHON_PATH = 'python3'
     }
     else{
-        env._PYTHON_PATH = 'python3'
+        env._PYTHON_PATH = 'python'
     }
     env._FRAMEWORK_PATH = './Framework/'
     env._JOB_ACTION_PATH = './Framework/python/'
