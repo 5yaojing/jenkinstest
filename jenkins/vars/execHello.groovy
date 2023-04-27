@@ -8,8 +8,8 @@ def call(){
     notifyGroup = "All"
     notifyBranch = "Data:${env.__BranchData}, Client:${env.__BranchClient}"
     notifyFeature = ""
-    //notifyMsgSuccess = "生成Meta成功"
-    //notifyMsgFailure = "生成Meta失败"
-    //notifyMsgAborted = "取消生成Meta了"
+    notifyMsgSuccess = "生成Meta成功"
+    notifyMsgFailure = "生成Meta失败"
+    notifyMsgAborted = "取消生成Meta了"
     basePipelineNotifyResult(pythonEntry, pythonParams, notifyGroup, notifyBranch, notifyFeature, notifyMsgSuccess, notifyMsgFailure, notifyMsgAborted)    
 }
