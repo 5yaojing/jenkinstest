@@ -1,0 +1,20 @@
+mac:
+    xcode
+    brew
+    mono   
+
+common:    
+    git >= 2.37.1
+    python >= 3.8
+    python2.7 for android aggregate sdk
+
+    pip3 install click
+    pip3 install requests
+    pip3 install dingtalkchatbot
+    pip3 install lz4
+    
+    java 17 for jenkis
+    java 8 for android
+    android studio(setup SDK,NDK etc.)
+    gradle 6.1.1
+    ant 1.10.12 for android aggregate sdk

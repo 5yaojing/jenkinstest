@@ -1,0 +1,10 @@
+class CUnity:
+    version = ''
+    appPath = ''
+    playbackEnginesPath = ''    
+    account_Develop = ''
+    password_Develop = ''
+    serial_Develop = ''
+    account_Publish = ''
+    password_Publish = ''
+    serial_Publish = ''
