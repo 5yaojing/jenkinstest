@@ -9,9 +9,9 @@ def DoDefineVars()
     env._FRAMEWORK_PATH = './Framework/'
     env._JOB_ACTION_PATH = './Framework/python/'
     //
-    env._FRAMEWORK_GIT_URL = 'https://tygit.tuyoo.com/unicorn/SLGJenkins_Python.git'
-    env._FRAMEWORK_GIT_CREDENTIALS_ID = 'COACredentialID'
-    env._FRAMEWORK_GIT_BRANCH = 'minigame'
+    env._FRAMEWORK_GIT_URL = 'https://github.com/5yaojing/jenkinstest.git'
+    env._FRAMEWORK_GIT_CREDENTIALS_ID = 'abc46d15-e665-438e-b09e-7a4afae13264'
+    env._FRAMEWORK_GIT_BRANCH = 'main'
 }
 
 def DoDefinePythonVars()
