@@ -7,21 +7,6 @@ from framework.modules.MGit import *
 from product.config.CNodeProduct import *
 from product.config.CGitProduct import *
 
-def RunInternalScripts(dataLocation : str, clientLocation: str):
-    scriptPath = os.path.join(clientLocation, 'miniGame/buildDepend/excel2csv.py')
-
-    result = 0
-    if BConstSystemPlatform == BPlatformEnum.OSX:
-        result = UCommand.RunCmd(f'chmod +x {scriptPath}')
-
-    dataDirectory = os.path.join(dataLocation, 'DataTables/')
-    targetDirectory = os.path.join(clientLocation, 'miniGame/assets/games/configs/csv/')
-
-    if result == 0:
-        result = UCommand.RunPython(f'{scriptPath} -s 0 {dataDirectory} {targetDirectory}')
-    
-    return result == 0, targetDirectory
-
 def DoAction(configKey : str, platform : BPlatformEnum, game : BGameEnum, args : dict):
     UTracking.LogInfo('Meta->DoAction', UTracking.BeautifyLog(args))
 
@@ -57,6 +42,7 @@ def DoAction(configKey : str, platform : BPlatformEnum, game : BGameEnum, args :
         # project.Check(metaResult, 'Run internal scripts', args)
         # project.Check(git.CommitAndPush(gitParamsClient, 'Jenkins commit meta', [resultDirectory]), 'Git client commit', args)
         print("Hello World77777777777777777777")
+
     finally:
         project.End()
 
@@ -65,9 +51,7 @@ def main():
     # UJenkinsArgs.Test_FillTestEnvironmentByConsoleTextFile(consoleTextPath)   
 
     args = UJenkinsArgs.FromEnvironment([
-        ('__Game'                   , 'game'                        , str   , 'error'       ),
-        ('__BranchData'             , 'branch_data'                 , str   , 'error'       ),
-        ('__BranchClient'           , 'branch_client'               , str   , 'error'       )
+        ('__Game'                   , 'game'                        , str   , 'error'       )
     ])
     
     configKey = ''
