@@ -1,9 +1,6 @@
-def call(agentLabel, pythonEntry, pythonParams){
+def call(pythonEntry, pythonParams){
     pipeline {
-        agent {
-            node {
-                label "${agentLabel}"
-            }
+        agent any
         }
         stages {
             stage ('Prepare'){

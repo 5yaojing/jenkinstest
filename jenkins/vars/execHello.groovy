@@ -5,11 +5,11 @@ def call(){
     //agentLabel = "MiniGame"
     pythonEntry = "hellotest.py"
     pythonParams = ""
-    notifyGroup = "All"
-    notifyBranch = "Data:${env.__BranchData}, Client:${env.__BranchClient}"
-    notifyFeature = ""
-    notifyMsgSuccess = "生成Meta成功"
-    notifyMsgFailure = "生成Meta失败"
-    notifyMsgAborted = "取消生成Meta了"
-    basePipeline(pythonEntry, pythonParams, notifyGroup, notifyBranch, notifyFeature, notifyMsgSuccess, notifyMsgFailure, notifyMsgAborted)    
+    //notifyGroup = "All"
+    //notifyBranch = "Data:${env.__BranchData}, Client:${env.__BranchClient}"
+    //notifyFeature = ""
+    //notifyMsgSuccess = "生成Meta成功"
+    //notifyMsgFailure = "生成Meta失败"
+    //notifyMsgAborted = "取消生成Meta了"
+    basePipeline(pythonEntry, pythonParams)    
 }
