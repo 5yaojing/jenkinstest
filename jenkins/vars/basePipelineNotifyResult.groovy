@@ -1,10 +1,6 @@
-def call(agentLabel, pythonEntry, pythonParams, notifyGroup, notifyBranch, notifyFeature, notifyMsgSuccess, notifyMsgFailure, notifyMsgAborted){
+def call(pythonEntry, pythonParams, notifyGroup, notifyBranch, notifyFeature, notifyMsgSuccess, notifyMsgFailure, notifyMsgAborted){
     pipeline {
-        agent {
-            node {
-                label "${agentLabel}"
-            }
-        }
+        agent any
         // parameters {
         //     string(name: '__Test', defaultValue: 'test', description: '测试的，没其他用')
         // }
