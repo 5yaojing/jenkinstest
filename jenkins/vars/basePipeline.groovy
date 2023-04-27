@@ -1,7 +1,6 @@
 def call(pythonEntry, pythonParams){
     pipeline {
         agent any
-        }
         stages {
             stage ('Prepare'){
                 steps {
