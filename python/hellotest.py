@@ -11,7 +11,7 @@ from product.config.CGitProduct import *
 #传入的参数为前面克隆或者拉下来的git仓库的路径，我要进入这个路径然后在里面新建一个python脚本，内容为打印hello world，返回是否成功
 def ChangeFolderContent(filePath : str)->bool:
     python_script='print("hello world")'
-    filt_path=os.path.join(filePath,'anotherhello.py')
+    filt_path=os.path.join(filePath,'aaaanotherhello.py')
     try:
         with open(filt_path,'w') as f:
             f.write(python_script)
@@ -68,13 +68,13 @@ def DoAction(configKey : str, platform : BPlatformEnum, game : BGameEnum, args :
         changeresult=ChangeFolderContent(helloLocation)
         project.Check(changeresult,'ChangeFolderContent',args)
         #提交
-        #project.Check(git.CommitAndPush(gitParamsHello,'Jenkins commit meta',[helloLocation]),'Git HelloTest commit',args)
+        project.Check(git.CommitAndPush(gitParamsHello,'Jenkins commit meta',[helloLocation]),'Git HelloTest commit',args)
     finally:
         project.End()
 
 def main():
-    # consoleTextPath = os.path.join(UOS.DirectoryOfPath(__file__), 'ConsoleText.txt')
-    # UJenkinsArgs.Test_FillTestEnvironmentByConsoleTextFile(consoleTextPath)   
+    #consoleTextPath = os.path.join(UOS.DirectoryOfPath(__file__), 'ConsoleText.txt')
+    #UJenkinsArgs.Test_FillTestEnvironmentByConsoleTextFile(consoleTextPath)   
 
     args = UJenkinsArgs.FromEnvironment([
         ('__Game'                   , 'game'                        , str   , 'error'       )
