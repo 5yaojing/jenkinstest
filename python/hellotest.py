@@ -61,7 +61,7 @@ def DoAction(configKey : str, platform : BPlatformEnum, game : BGameEnum, args :
         gitParamsHello=MGitParams()
         project.SetupGitParams('HelloTest2',gitParamsHello)
         #加参数
-        gitParamsHello.branch='main'
+        gitParamsHello.branch='master'
         project.Check(git.CloneOrPull(gitParamsHello),'Git HelloTest',args)
         helloLocation=gitParamsHello.location
         #修改文件
