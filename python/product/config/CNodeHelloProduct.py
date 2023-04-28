@@ -42,7 +42,7 @@ class CNodeHelloProduct(CNode):
             }
         }
     
-    def __CreateProduct(self, platform : BPlatformEnum, game : BGameEnum, index : int):
+    def __CreateProject(self, platform : BPlatformEnum, game : BGameEnum, index : int):
         name = f'{platform.value}_{game.value}{index}'
         project = CProject()
         project.name = name
