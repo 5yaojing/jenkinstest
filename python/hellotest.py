@@ -11,7 +11,7 @@ from product.config.CGitProduct import *
 #传入的参数为前面克隆或者拉下来的git仓库的路径，我要进入这个路径然后在里面新建一个python脚本，内容为打印hello world，返回是否成功
 def ChangeFolderContent(filePath : str)->bool:
     python_script='print("hello world")'
-    filt_path=os.path.join(filePath,'aaaanotherhello.py')
+    filt_path=os.path.join(filePath,'aaanotherhello.py')
     try:
         with open(filt_path,'w') as f:
             f.write(python_script)
