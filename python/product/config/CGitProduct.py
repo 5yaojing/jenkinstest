@@ -12,5 +12,5 @@ class CGitProduct(CGit):
     else:
         UTracking.RaiseException('CGitProduct->__init__', 'Unsupported system platform: ' + BConstSystemPlatform)
 
-    account = 'coa_jenkins@tuyoogame.com'
-    password = 'jenkins_coa'
+    account = 'zhangziyao@tuyoogame.com'
+    password = '715813zz'
