@@ -99,7 +99,7 @@ class CNodeHelloProduct(CNode):
     ################################################################
 
 class CNodeHelloSelector:
-    __default = CNodeHelloProduct()
+    __defaultNode = CNodeHelloProduct()
     __nodes={}
     def Do(self,name:str ='')->CNode:
         node=None
