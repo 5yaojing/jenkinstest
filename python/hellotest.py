@@ -59,7 +59,7 @@ def DoAction(configKey : str, platform : BPlatformEnum, game : BGameEnum, args :
         #把一个仓库的拉下来然后做一些修改然后传上去，在框架里做这件事和在Jenkins里面做这件事
         git=MGit(CGitProduct())
         gitParamsHello=MGitParams()
-        project.SetupGitParams('HelloTest',gitParamsHello)
+        project.SetupGitParams('HelloTest2',gitParamsHello)
         #加参数
         gitParamsHello.branch='main'
         project.Check(git.CloneOrPull(gitParamsHello),'Git HelloTest',args)
@@ -67,8 +67,7 @@ def DoAction(configKey : str, platform : BPlatformEnum, game : BGameEnum, args :
         #修改文件
         changeresult=ChangeFolderContent(helloLocation)
         project.Check(changeresult,'ChangeFolderContent',args)
-        #提交
-        
+        #提交        
         project.Check(git.CommitAndPush(gitParamsHello,'Jenkins commit meta',[helloLocation]),'Git HelloTest commit',args)
     finally:
         project.End()

@@ -62,6 +62,10 @@ class CNodeHelloProduct(CNode):
                 'HelloTest' : {
                     'url':'https://github.com/5yaojing/mongo_mongo.git',
                     'location':'HelloTest/'
+                },
+                'HelloTest2' : {
+                    'url':'https://tygit.tuyoo.com/miao/testjenkins.git',
+                    'location':'HelloTest2/'
                 }
             }
         else:
