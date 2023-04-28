@@ -68,8 +68,7 @@ def DoAction(configKey : str, platform : BPlatformEnum, game : BGameEnum, args :
         changeresult=ChangeFolderContent(helloLocation)
         project.Check(changeresult,'ChangeFolderContent',args)
         #提交
-        git.__GitCommand('config --global user.email "550707041@qq.com"')   
-        git.__GitCommand('config --global user.name "5yaojing"') 
+        
         project.Check(git.CommitAndPush(gitParamsHello,'Jenkins commit meta',[helloLocation]),'Git HelloTest commit',args)
     finally:
         project.End()
